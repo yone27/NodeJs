@@ -1,0 +1,20 @@
+{{#if successMsg}}
+    <p>Aqui se muestra mi alerta buena {{successMsg}}</p>
+{{/if }}
+
+{{#if error}}
+    <p>Aqui se muestra mi alerta mala {{error}}</p>
+{{/if }}
+
+{{#if errorMsg}}
+    <p>Aqui se muestra mi alerta mala {{errorMsg}}</p>
+{{/if }}
+
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/each}}
